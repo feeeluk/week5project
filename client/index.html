@@ -1,13 +1,41 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="module" src="./main.js" defer></script>
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script type="module" src="./main.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Vite App</title>
+</head>
+
+<body>
+  <!--Title-->
+  <header>
+    <h1>Bookish</h1>
+  </header>
+  <!--Book Gallery and buttons to navigate-->
+  <section class="BookGallery">
+    <div class="bookList" id="bookList"></div>
+    <button class="previousImg" id="previousImg">Previous</button>
+    <button class="nextImg" id="nextImg">Next</button>
+  </section>
+  <!--form for people to discus in forum-->
+  <section class="forms" action="wheredatagoes">
+    <h2>Add Comments</h2>
+    <label for="UserName">User Name</label>
+    <input type="userName" required />
+
+    <label for="comment">comment</label>
+    <input type="comment" required />
+
+    <button>Submit</button>
+  </section>
+
+  <!--View Comments-->
+  <h2>Comments</h2>
+  <div id="comments"></div>
+</body>
+
 </html>
