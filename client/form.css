@@ -3,6 +3,7 @@
     display: inline-block;
     width: 150px;
     vertical-align: top;
+    color: black;
 }
 
 .input{
@@ -11,4 +12,5 @@
 
 .textarea{
     min-height: 120px;
+    margin-top: 6px;
 }
