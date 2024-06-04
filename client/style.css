@@ -18,16 +18,15 @@
 
 /* GENERAL STYLES */
 * {
-    padding: 0px;
-    margin: 0px;
+    padding: 0em;
+    margin: 0em;
     box-sizing: border-box;
 }
 
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
-    scroll-padding-top: 6.2rem;
-    /* SET AS SAME HEIGHT AS HEADER ELEMENTS */
+    scroll-padding-top: 6.2em; /* SET AS SAME HEIGHT AS HEADER ELEMENTS */
 }
 
 body {
@@ -43,16 +42,13 @@ a:hover {
     color: rgb(165, 67, 42);
 }
 
-h1,
-h2,
-h3,
-li,
-a {
+h1, h2, h3, li, a {
     font-family: "Bree Serif", "Times New Roman", Times, serif;
-    color: rgb(36, 30, 30);
+    color:rgb(36, 30, 30);
 }
 
 p {
+    font-size: 18px;
     font-family: "Bree Serif", "Times New Roman", Times, serif;
     color: white;
 }
@@ -64,73 +60,88 @@ header {
     z-index: 100;
     width: 100vw;
     position: sticky;
-    top: 0;
+    top: 0em;
     filter: drop-shadow(0px -2px 4px #443434);
 }
 
+
 .alert {
-    z-index: 100;
-    height: 2.2rem;
+    height: 2.2em;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 2em;
     background-color: rgb(84, 172, 103);
+}
+
+.alert > p {
+    font-size: 16px;
 }
 
 #alert-button {
     color: white;
-    border: 0.12rem solid;
-    padding: 0rem 0.4rem 0.1rem 0.4rem;
-    border-radius: 0.5rem;
+    border: 0.12em solid;
+    padding: 0em 0.4em 0.1em 0.4em;
+    border-radius: 0.5em;
 }
 
 #alert-button:hover {
-    color: rgb(84, 172, 103);
+    color:rgb(84, 172, 103);
     background-color: white;
 }
 
 .navigation {
-    height: 4rem;
+    height: 4em;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 2.5em;
+    position: relative;
+    left: -0.8em;
     background-color: rgb(255, 243, 231);
 }
 
-.navigation>ul {
+.navigation > ul {
     list-style-type: none;
 }
 
 .navlinks {
     display: flex;
-    gap: 40px;
+    gap: 2.5em;
+}
+
+.logo {
+    width: 60px;
+    height: 48px;
+    background-image: url("./images/logo.png");
+}
+
+.logo:hover {
+    background-image: url("./images/logo-hover.png");
 }
 
 
-
 /* SECTIONS COMMON STYLES */
-.section {
+.section{
     position: relative;
-    height: 35rem;
+    height: 35em;
     width: 100vw;
     background-size: cover;
     background-color: rgb(255, 243, 231);
 }
 
 .section-border {
-    height: 0.7rem;
+    height: 0.7em;
     background-color: rgb(255, 243, 231);
 }
 
 
 
-/* SECTION 1 */
+/* SECTION 1 - HERO PAGE*/
 #section1 {
-    height: 30rem;
-    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.096) 0%, rgba(85, 38, 11, 0.5) 100%), url("./images/pexels-photo-2128249.jpg");
+    height: 30em;
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.096) 0%, rgba(61, 28, 9, 0.5) 100%), url("./images/pexels-photo-2128249.jpg");
 }
 
 .section1-content {
@@ -144,25 +155,46 @@ header {
     flex-direction: column;
 }
 
-.hero-title {
+.section1-content > h1 {
+    font-size: 4em;
     color: white;
     text-shadow: 4px 4px #000000;
-    font-size: 4rem;
+}
+
+.section1-content > p {
+    color: white;
+    text-shadow: 2px 2px 5px #000000;
+}
+
+.in-text-ahref {
+    color: white;
+    text-decoration: underline;
+}
+
+.in-text-ahref:hover {
+    color: rgb(245, 199, 182);
+    text-decoration: none;
 }
 
 
 
-/* SECTION 2 */
+/* SECTION 2 - IMAGE GALLERY (SHORTLIST) */
 #section2 {
-    height: 35rem;
+    height: 35em;
     background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.096) 0%, rgba(85, 38, 11, 0.5) 100%);
 }
 
+/* SECTION 2 - DYNAMIC ELEMENTS */
+.main-pic {
+    height: 470px;
+    width: auto;
+}
 
 
-/* SECTION 3 */
+
+/* SECTION 3 - COMMENTS FORM */
 #section3 {
-    height: 60rem;
+    height: 60em;
     background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.096) 0%, rgba(85, 38, 11, 0.5) 100%);
 }
 
@@ -174,20 +206,11 @@ footer {
 }
 
 .footer-text {
+    font-size: 16px;
     color: black;
     text-align: center;
 }
 
-/*Resizing img's in the gallery*/
-.main-pic {
-    height: 470px;
-    width: auto;
-}
-
-/*audio reder (aria) */
-#announcer {
-    visibility: hidden;
-}
 
 
 
@@ -195,10 +218,7 @@ footer {
 
 
 
-
-
-
-/* DYNAMIC ELEMENTS. DO NOT TOUCH UNTIL LATER. */
+/* DYNAMIC ELEMENTS */
 .label {
     display: inline-block;
     width: 150px;
@@ -211,4 +231,8 @@ footer {
 
 .textarea {
     min-height: 120px;
+}
+
+#announcer {
+    visibility: hidden;
 }

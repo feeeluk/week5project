@@ -4,32 +4,32 @@ const bookList = [
   {
     bookTitle: "The Bee Sting",
     bookAuthor: "Paul Murray",
-    URL: "https://m.media-amazon.com/images/I/518qVjEOWjL._SY445_SX342_.jpg",
+    URL: "./images-gallery/1oksd2dp.bmp",
     alt: "THE BEE STING by Paul Murray | 'The Bee Sting' is the story of the Barnes family, set in contemporary Ireland written with considerable wit and compassion.",
   },
 
   {
     bookTitle: "YellowFace",
     bookAuthor: "R. F. Kuang",
-    URL: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTj5Q8rA4EUa0oNQN8yBrNdnzixQz41IjL8Xf7ozuxTDum8QxLD",
+    URL: "./images-gallery/kvhchlm8.bmp",
     alt: "YELLOWFACE by R.F Kuang | A satire of racial diversity in the publishing industry",
   },
   {
     bookTitle: "Birnam Wood",
     bookAuthor: "Eleanor Catton",
-    URL: "https://i.cbc.ca/1.6736534.1675455039!/fileImage/httpImage/image.jpg_gen/derivatives/original_620/book-cover-birnam-wood-by-eleanor-catton.jpg",
+    URL: "./images-gallery/l7whnvec.bmp",
     alt: " BIRNAM WOOD by Eleanor Catton | Birnam Wood follows memebers of a guerilla gardening collective as they undertake a new projct on abandoned farmland",
   },
   {
     bookTitle: "Lessons in Chemeistry",
     bookAuthor: "Bonnie Garmus",
-    URL: "https://m.media-amazon.com/images/I/71sDDGFkInL._SY466_.jpg",
+    URL: "./images-gallery/ol72l3sg.bmp",
     alt: "LESSONS IN CHEMISTRY by Bonnie Garmus | An uplifting summer book about a chemist who becomes a TV chef",
   },
   {
     bookTitle: "Butter",
     bookAuthor: "Asako Yuzuki",
-    URL: "https://m.media-amazon.com/images/I/71I3CatXc8L._SY466_.jpg",
+    URL: "./images-gallery/5tyh3bbj.bmp",
     alt: "BUTTER by Asako Yuzuki | A Japanese bestseller about a gourmet cook/serial killer and the journalist intent on cracking her case",
   },
 ];
