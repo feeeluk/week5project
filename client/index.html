@@ -6,7 +6,7 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script type="module" src="./main.js" defer></script>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./style.css">
   <title>Vite App</title>
 </head>
 
@@ -22,15 +22,32 @@
     <button class="nextImg" id="nextImg">Next</button>
   </section>
   <!--form for people to add comments-->
-  <section class="forms" action="wheredatagoes">
+  <section class="forms">
+    
     <h2>Add Comments</h2>
-    <label for="UserName">User Name</label>
-    <input type="userName" required />
+    
+    <form id="inputForm" action=""></form>
 
-    <label for="comment">comment</label>
-    <input type="comment" required />
+      <p>
+        <label for="username" class="label">Username:</label>
+        <input id="username" name="location" class="input" type="text" required>
+      </p>
 
-    <button>Submit</button>
+      <p>
+        <label for="location" class="label">Location:</label>
+        <input id="location" name="location" class="input" type="text" required>
+      </p>
+
+      <p>
+        <label for="content" class="label">Content:</label>
+        <textarea id="content" name="content" class="input textarea"></textarea>
+      </p>
+
+      <p>
+        <label for="button" class="label"></label>
+        <button id="button">Submit</button>
+      </p>
+
   </section>
 
   <!--View Comments-->
