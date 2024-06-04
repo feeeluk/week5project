@@ -1,27 +1,21 @@
+import express from "express"
+import cors from "cors"
 
-import express from "express";
-import cors from "cors";
+const PORT = 8080
 
-const PORT = 8080;
 
-const app = express();
-app.use(cors());
+const app = express()
+app.use(cors())
 
-app.get("/", (request, response) => {
-  response.json({ message: `root` });
-});
+// const db = new pg.Pool({
+//     connectionString: process.env.CONNECTION_STRING
+// })
 
-app.listen(PORT, () => {
-  console.log(`server running on port: ${PORT}`);
-});
-/*needed for form
-app.get('/form', (request, response) => {
-    response.json({message: `form`})
+
+app.get('/', (request, response) => {
+    response.json({message: `root`})
 })
 
-app.post("/form", function (request, response) {
-    response.json({ message: "you sent this to me" });
-  });
- 
-app.use(express.json());
-*/
+app.listen(PORT, () => {
+    console.log(`(*・‿・)ノ⌒*:･ﾟ✧ server running on port: ${PORT}`)
+})
