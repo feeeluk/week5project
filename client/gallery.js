@@ -88,6 +88,3 @@ function createDisplayImg(Picobj) {
     showpic.appendChild(imgTag);
 
 }
-
-
-
