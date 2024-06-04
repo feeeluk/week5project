@@ -66,8 +66,6 @@ function book(newBook) {
   createDisplayImg(bookList[currentImgIndex]);
 }
 
-
-
 function createPicList(bookList) {
   for (let i = 0; i < bookList.length; bookList = bookList + 1) {
     let img = document.createElement("img");
@@ -82,16 +80,13 @@ function createPicList(bookList) {
       book = i;
       console.log(currentImgIndex);
       createDisplayImg(bookList[i]);
-    })
+    });
 
     locationOfBookList.appendChild(img);
-
-
   }
 }
-
+createDisplayImg(bookList[0]);
 createPicList();
-
 
 function createDisplayImg(Picobj) {
   const aria = document.getElementById("aria");
