@@ -6,6 +6,9 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script type="module" src="./main.js" defer></script>
+  <script type="module" src="./gallery.js" defer></script>
+  <script type="module" src="./gallery.js" defer></script>
+  <link rel="stylesheet" href="./form.css">
   <link rel="stylesheet" href="./style.css">
   <title>The Bookish Book-Off Awards</title>
 </head>
@@ -13,6 +16,7 @@
 <body>
   <!--TITLE & NAVIGATION-->
   <header>
+
     <div class="alert">
       <p>
         NOMINATIONS CLOSED! Join the discussion now!
@@ -46,6 +50,45 @@
 
 
   <div class="section-border"></div>
+
+    <h1>The Bookish Book Awards 2024</h1>
+    <h3>The nominations for 2024 are now closed and the following have been shortlisted by our panel of experts ready
+      for the next phase of the competition.</h3>
+  </header>
+  <!--Book Gallery and buttons to navigate-->
+  <section class="BookGallery">
+    <div class="bookList" id="bookList"></div>
+    <div id="showInfo"></div>
+    <button class="previousImg" id="previousImg">Previous</button>
+    <button class="nextImg" id="nextImg">Next</button>
+    <div aria-live="polite" id="aria"></div>
+  </section>
+  <!--form for people to add comments-->
+  <section class="forms">
+
+    <h2>Add Comments</h2>
+
+    <form id="inputForm" action=""></form>
+
+    <p>
+      <label for="username" class="label">Username:</label>
+      <input id="username" name="location" class="input" type="text" required>
+    </p>
+
+    <p>
+      <label for="location" class="label">Location:</label>
+      <input id="location" name="location" class="input" type="text" required>
+    </p>
+
+    <p>
+      <label for="content" class="label">Content:</label>
+      <textarea id="content" name="content" class="input textarea"></textarea>
+    </p>
+
+    <p>
+      <label for="button" class="label"></label>
+      <button id="button">Submit</button>
+    </p>
 
 
 
