@@ -1,3 +1,4 @@
+//An array of objects – the objects being book covers, authors and books.
 const bookList = [{
     bookTitle: "The Bee Sting",
     bookAuthor: "Paul Murray",
@@ -19,13 +20,16 @@ const bookList = [{
     alt: "A monochrome picture of a forest, the field and trees white, the sky black"
 }]
 
+//pulled through the div location for where the gallery will be from HTML & the location for where the selected image will pop up from HTML.
 const locationOfBookList = document.getElementById("bookList");
 const showInfo = document.getElementById("showInfo")
 
+//current image is "0" - this will help us to use he for to flick through the pics.
 let currentImgIndex = 0;
 
 const prevBtn = document.getElementById("previousImg")
 const nextBtn = document.getElementById("nextImg")
+
 const aria = document.getElementById("announcer")
 
 prevBtn.addEventListener("click", function () {
@@ -48,19 +52,16 @@ function book(newBook) {
     createDisplayImg(bookList[currentImgIndex]);
 }
 
-function createPicList(currentImgIndex) {
-    for (let i = 0; i < currentImgIndex.length; currentImgIndex = currentImgIndex + 1) {
+function createPicList(bookList) {
+    for (let i = 0; i < bookList.length; bookList = bookList + 1) {
         let img = document.createElement("img")
-        let h3 = document.createElement("h3")
-        let h4 = document.createElement("h4")
 
+        img.src = bookList[i].URL;
+        img.alt = bookList[i].alt;
 
-        img.src = currentImgIndex[i].URL;
-        h3.textContent = bookList.bookTitle
-        h4.textContent = bookList.bookAuthor
 
         img.setAttribute("tabindex", "0");
-        img.classList("thumb-img");
+        img.classList.add("thumb-img");
 
         img.addEventListener("click", function () {
             console.log(bookList[i]);
@@ -80,11 +81,11 @@ createPicList(bookList);
 function createDisplayImg(Picobj) {
     const aria = document.getElementById("aria");
     aria.textContent = Picobj.alt;
-    showpic.innerHTML = "";
+    showInfo.innerHTML = "";
     let imgTag = document.createElement("img");
     imgTag.classList.add("main-pic");
     imgTag.src = Picobj.URL;
     imgTag.src = Picobj.alt;
-    showpic.appendChild(imgTag);
+    showInfo.appendChild(imgTag);
 
 }
