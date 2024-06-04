@@ -7,7 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script type="module" src="./main.js" defer></script>
   <script type="module" src="./gallery.js" defer></script>
+  <script type="module" src="./posts.js" defer></script>
+
   <link rel="stylesheet" href="./form.css">
+  <link rel="stylesheet" href="./comments.css">
   <link rel="stylesheet" href="./style.css">
   <title>The Bookish Book-Off Awards</title>
 </head>
@@ -62,54 +65,33 @@
       </div>
     </section>
 
-
-
-
-    <div class="section-border"></div>
-
-
-
-
-
-    <!-- COMMENTS -->
-    <section class="section" id="section3">
-      <!--COMMENTS FORM-->
-      <div class="forms">
-        <h2>Add Comments</h2>
-        <form id="inputForm" action=""></form>
+      <form id="commentForm">
         <p>
           <label for="username" class="label">Username:</label>
-          <input id="username" name="location" class="input" type="text" required>
+          <input id="username" name="username" class="input" type="text" required>
         </p>
+
         <p>
           <label for="location" class="label">Location:</label>
           <input id="location" name="location" class="input" type="text" required>
         </p>
+
         <p>
           <label for="content" class="label">Content:</label>
           <textarea id="content" name="content" class="input textarea"></textarea>
         </p>
+
         <p>
-          <label for="button" class="label"></label>
-          <button id="button">Submit</button>
+          <label for="submit" class="label"></label>
+          <button id="submit" name="submit" class="submit" type="submit">Submit</button>
         </p>
-      </div>
-      <!--DISPLAY COMMENTS-->
-      <h2>Comments</h2>
-      <div id="comments"></div>
-    </section>
+      </form>
+
+      <div id="commentsSection"></div>
 
     <div class="section-border"></div>
-
-
-
-
-    <div class="section-border"></div>
-
 
   </main>
-
-
 
   <!-- FOOTER -->
   <footer>

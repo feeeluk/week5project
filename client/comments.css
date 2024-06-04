@@ -1,0 +1,24 @@
+#commentsSection{
+    background-color: darkgrey;
+    padding: 5px;
+    padding-top: 15px;
+    width: 100%;
+}
+
+    .username{
+        background-color: green;
+    }
+
+    .location{
+        background-color: lightblue;
+    }
+
+    .content{
+        background-color: pink;
+    }
+
+    .comment{
+        background-color: yellow;
+        padding: 5px;
+        margin-bottom: 5px;
+    }
