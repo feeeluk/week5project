@@ -16,40 +16,43 @@ htmlForm.addEventListener("submit", (event) => {
         },
         body: JSON.stringify(newComment)
     })
+
+    htmlForm.reset()
+
+    setTimeout(fetchComments, 100)
+    
 })
 
 async function fetchComments(){
     let response = await fetch("http://localhost:8080/comments")
     let final = await response.json()
-    console.log(final)
 
     displayComments(final)
 }
 
 function displayComments(arrayOfComments){
 
+    htmlCommentsSection.innerHTML = ''
+
     arrayOfComments.forEach( function (comment){
-        
-        let userNameP = document.createElement("p")
-        userNameP.setAttribute("class","username")
-
-        let locationP = document.createElement("p")
-        locationP.setAttribute("class","location")
-
-        let commentP = document.createElement("p")
-        commentP.setAttribute("class","content")
 
         let postD = document.createElement("div")
-        postD.setAttribute("class","comment")
+        let usernameP = document.createElement("p")
+        let locationP = document.createElement("p")
+        let commentP = document.createElement("p")
 
-        userNameP.innerText = "Username: " + comment.username
+        postD.setAttribute("class","commentBox")
+        usernameP.setAttribute("class","commentUsername")        
+        locationP.setAttribute("class","commentLocation")
+        commentP.setAttribute("class","commentContent")
+
+        usernameP.innerText = "Username: " + comment.username
         locationP.innerText = "Location: " + comment.location
         commentP.innerText = "Content: " + comment.content
 
-        postD.appendChild(userNameP)
+        postD.appendChild(usernameP)
         postD.appendChild(locationP)
         postD.appendChild(commentP)
         htmlCommentsSection.appendChild(postD)
-    });
+    })
 }
-

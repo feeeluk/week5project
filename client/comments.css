@@ -3,21 +3,23 @@
     padding: 5px;
     padding-top: 15px;
     width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
-    .username{
+    .commentUsername{
         background-color: green;
     }
 
-    .location{
+    .commentLocation{
         background-color: lightblue;
     }
 
-    .content{
+    .commentContent{
         background-color: pink;
     }
 
-    .comment{
+    .commentBox{
         background-color: yellow;
         padding: 5px;
         margin-bottom: 5px;
