@@ -3,11 +3,12 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="icon" type="image/svg+xml" href="./vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script type="module" src="./main.js" defer></script>
   <script type="module" src="./gallery.js" defer></script>
   <script type="module" src="./posts.js" defer></script>
+
   <link rel="stylesheet" href="./form.css">
   <link rel="stylesheet" href="./comments.css">
   <link rel="stylesheet" href="./style.css">
@@ -25,8 +26,8 @@
       <a href="#section3" id="alert-button">Share Your Thoughts</a>
     </div>
     <nav class="navigation">
-      <a href="#section1"><img src="./images/logo-placeholder.png"></a>
       <h1 class="site-title"><a href="#section1">The Bookish Book-Off Awards</a></h1>
+      <a href="#section1"><div class="logo"></div></a>
       <ul class="navlinks">
         <li><a href="#section1">Home</a></li>
         <li><a href="#section2">Nominees</a></li>
@@ -42,34 +43,27 @@
     <!-- HERO SECTION -->
     <section class="section" id="section1">
       <div class="content section1-content">
-        <h1 class="hero-title">Voting For 2024 Now Closed</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum blanditiis nulla exercitationem sint quo
-          consequatur vero eius ea nostrum, unde officia quod? Dicta nisi error sunt possimus eligendi saepe quasi.</p>
+        <h1>Voting For 2024 Now Closed</h1>
+        <p>The nominations for 2024 are now closed.</p>
+        <p>Discover our <a href="#section2" class="in-text-ahref">shortlist</a> - selected by our panel of experts, ready for the next phase of the competition.</p>
       </div>
     </section>
 
+
     <div class="section-border"></div>
 
-    <h1>The Bookish Book Awards 2024</h1>
-    <h3>The nominations for 2024 are now closed and the following have been shortlisted by our panel of experts ready
-      for the next phase of the competition.</h3>
-    <!--Book Gallery and buttons to navigate-->
+
+    <!--BOOK GALLERY-->
     <section class="section" id="section2">
-      <h1>GALLERY</h1>
-      <section class="BookGallery">
+      <h1>SHORTLIST</h1>
+      <div class="BookGallery">
         <div class="bookList" id="bookList"></div>
-        <div id="showInfo"></div>
+        <div class="showInfo" id="showInfo"></div>
         <button class="previousImg" id="previousImg">Previous</button>
         <button class="nextImg" id="nextImg">Next</button>
         <div aria-live="polite" id="aria"></div>
-      </section>
+      </div>
     </section>
-    <div class="section-border"></div>
-
-    <!--form for people to add comments-->
-    <section class="forms">
-
-      <h2>Add Comments</h2>
 
       <form id="commentForm">
         <p>
@@ -94,18 +88,6 @@
       </form>
 
       <div id="commentsSection"></div>
-
-    </section>
-    <!--BOOK GALLERY-->
-    <!-- <section class="section" id="section2">
-    <h1>GALLERY</h1>
-    <div class="BookGallery">
-      <div class="bookList" id="bookList"></div>
-      <button class="previousImg" id="previousImg">Previous</button>
-      <button class="nextImg" id="nextImg">Next</button>
-    </div>
-  </section>
-  <div class="section-border"></div> -->
 
     <div class="section-border"></div>
 

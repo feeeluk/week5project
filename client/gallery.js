@@ -4,21 +4,33 @@ const bookList = [
   {
     bookTitle: "The Bee Sting",
     bookAuthor: "Paul Murray",
-    URL: "https://i5.walmartimages.com/seo/The-Bee-Sting-Hardcover-9780374600303_557a4c21-e72a-44f2-b354-616dedb2d1e8.d227ca4a124f57c03cc4549b49a7edf9.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF",
-    alt: "A cream cover with a bee in the centre flying down towards the bottom right corner",
+    URL: "./images-gallery/1oksd2dp.bmp",
+    alt: "THE BEE STING by Paul Murray | 'The Bee Sting' is the story of the Barnes family, set in contemporary Ireland written with considerable wit and compassion.",
   },
 
   {
     bookTitle: "YellowFace",
     bookAuthor: "R. F. Kuang",
-    URL: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTj5Q8rA4EUa0oNQN8yBrNdnzixQz41IjL8Xf7ozuxTDum8QxLD",
-    alt: "A yellow cover with a pair of eyes looking off to the side",
+    URL: "./images-gallery/kvhchlm8.bmp",
+    alt: "YELLOWFACE by R.F Kuang | A satire of racial diversity in the publishing industry",
   },
   {
     bookTitle: "Birnam Wood",
     bookAuthor: "Eleanor Catton",
-    URL: "https://i.cbc.ca/1.6736534.1675455039!/fileImage/httpImage/image.jpg_gen/derivatives/original_620/book-cover-birnam-wood-by-eleanor-catton.jpg",
-    alt: "A monochrome picture of a forest, the field and trees white, the sky black",
+    URL: "./images-gallery/l7whnvec.bmp",
+    alt: " BIRNAM WOOD by Eleanor Catton | Birnam Wood follows memebers of a guerilla gardening collective as they undertake a new projct on abandoned farmland",
+  },
+  {
+    bookTitle: "Lessons in Chemeistry",
+    bookAuthor: "Bonnie Garmus",
+    URL: "./images-gallery/ol72l3sg.bmp",
+    alt: "LESSONS IN CHEMISTRY by Bonnie Garmus | An uplifting summer book about a chemist who becomes a TV chef",
+  },
+  {
+    bookTitle: "Butter",
+    bookAuthor: "Asako Yuzuki",
+    URL: "./images-gallery/5tyh3bbj.bmp",
+    alt: "BUTTER by Asako Yuzuki | A Japanese bestseller about a gourmet cook/serial killer and the journalist intent on cracking her case",
   },
 ];
 
@@ -54,6 +66,8 @@ function book(newBook) {
   createDisplayImg(bookList[currentImgIndex]);
 }
 
+
+
 function createPicList(bookList) {
   for (let i = 0; i < bookList.length; bookList = bookList + 1) {
     let img = document.createElement("img");
@@ -63,19 +77,21 @@ function createPicList(bookList) {
 
     img.setAttribute("tabindex", "0");
     img.classList.add("thumb-img");
-
     img.addEventListener("click", function () {
       console.log(bookList[i]);
       book = i;
       console.log(currentImgIndex);
       createDisplayImg(bookList[i]);
-    });
+    })
 
     locationOfBookList.appendChild(img);
+
+
   }
 }
 
 createPicList();
+
 
 function createDisplayImg(Picobj) {
   const aria = document.getElementById("aria");
@@ -84,6 +100,11 @@ function createDisplayImg(Picobj) {
   let imgTag = document.createElement("img");
   imgTag.classList.add("main-pic");
   imgTag.src = Picobj.URL;
-  imgTag.src = Picobj.alt;
+  imgTag.alt = Picobj.alt;
   showInfo.appendChild(imgTag);
+  // if (!(imgTag.src)) {
+  //   imgTag.src = bookList[0].URL;
+  //   imgTag.alt = bookList[0].alt;
+
+  // };
 }
