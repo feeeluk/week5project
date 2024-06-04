@@ -5,19 +5,52 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script type="module" src="main.js" defer></script>
-  <link rel="stylesheet" href="form.css">
-  <link rel="stylesheet" href="style.css">
-  <title>Vite App</title>
+  <script type="module" src="./main.js" defer></script>
+  <script type="module" src="./gallery.js" defer></script>
+  <script type="module" src="./gallery.js" defer></script>
+  <link rel="stylesheet" href="./form.css">
+  <link rel="stylesheet" href="./style.css">
+  <title>The Bookish Book-Off Awards</title>
 </head>
 
 <body>
-  <!--Title-->
+  <!--TITLE & NAVIGATION-->
   <header>
+
+    <div class="alert">
+      <p>
+        NOMINATIONS CLOSED! Join the discussion now!
+      </p>
+      <a href="#section3" id="alert-button">Share Your Thoughts</a>
+    </div>
+    <nav class="navigation">
+      <a href="#section1"><img src="./images/logo-placeholder.png"></a>
+    <h1 class="site-title"><a href="#section1">The Bookish Book-Off Awards</a></h1>
+      <ul class="navlinks">
+        <li><a href="#section1">Home</a></li>
+        <li><a href="#section2">Nominees</a></li>
+        <li><a href="#section3">Comments</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+
+  <main>
+  <!-- HERO SECTION -->
+  <section class="section" id="section1">
+    <div class="content section1-content">
+      <h1 class="hero-title">Voting For 2024 Now Closed</h1>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum blanditiis nulla exercitationem sint quo consequatur vero eius ea nostrum, unde officia quod? Dicta nisi error sunt possimus eligendi saepe quasi.</p>
+    </div>
+  </section>
+
+  <div class="section-border"></div>
+
     <h1>The Bookish Book Awards 2024</h1>
     <h3>The nominations for 2024 are now closed and the following have been shortlisted by our panel of experts ready
       for the next phase of the competition.</h3>
-  </header>
   <!--Book Gallery and buttons to navigate-->
   <section class="BookGallery">
     <div class="bookList" id="bookList"></div>
@@ -54,10 +87,58 @@
     </p>
 
   </section>
+  <!--BOOK GALLERY-->
+  <section class="section" id="section2">
+    <h1>GALLERY</h1>
+    <div class="BookGallery">
+      <div class="bookList" id="bookList"></div>
+      <button class="previousImg" id="previousImg">Previous</button>
+      <button class="nextImg" id="nextImg">Next</button>
+    </div>
+  </section>
+  <div class="section-border"></div>
 
-  <!--View Comments-->
-  <h2>Comments</h2>
-  <div id="comments"></div>
+  <!--COMMENTS FORM-->
+  <section class="section" id="section3">
+    <div class="forms">
+      <h2>Add Comments</h2>
+      <form id="inputForm" action=""></form>
+        <p>
+          <label for="username" class="label">Username:</label>
+          <input id="username" name="location" class="input" type="text" required>
+        </p>
+        <p>
+          <label for="location" class="label">Location:</label>
+          <input id="location" name="location" class="input" type="text" required>
+        </p>
+        <p>
+          <label for="content" class="label">Content:</label>
+          <textarea id="content" name="content" class="input textarea"></textarea>
+        </p>
+        <p>
+          <label for="button" class="label"></label>
+          <button id="button">Submit</button>
+        </p>
+    </div>
+    <!--DISPLAY COMMENTS-->
+    <h2>Comments</h2>
+    <div id="comments"></div>
+  </section>
+
+
+
+  <div class="section-border"></div>
+
+
+  </main>
+
+
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="footer-text">&copy; 2024 Bookish Inc.</p>
+    <p class="footer-text">Disclaimer: This website is a work of fiction done for a course assignment.</p>
+  </footer>
+
 </body>
-
 </html>

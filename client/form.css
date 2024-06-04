@@ -1,14 +1,14 @@
-/* Style for comments form */
-.label {
-  display: inline-block;
-  width: 150px;
-  vertical-align: top;
+
+.label{
+    display: inline-block;
+    width: 150px;
+    vertical-align: top;
 }
 
-.input {
-  width: 200px;
+.input{
+    width: 200px;
 }
 
-.textarea {
-  min-height: 120px;
+.textarea{
+    min-height: 120px;
 }
