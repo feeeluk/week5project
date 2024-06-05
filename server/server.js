@@ -2,6 +2,7 @@ import express from "express"
 import cors from "cors"
 import pg from "pg"
 import dotenv from "dotenv"
+import nocache from "nocache"
 
 const PORT = 8080
 
@@ -9,6 +10,7 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 dotenv.config()
+app.use(nocache())
 
 const db = new pg.Pool({
     connectionString: process.env.CONNECTION_STRING

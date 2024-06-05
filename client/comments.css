@@ -1,5 +1,5 @@
 #commentsSection{
-    background-color: darkgrey;
+    background-color: linear-gradient(90deg, rgba(0, 0, 0, 0.096) 0%, rgba(85, 38, 11, 0.5) 100%);
     padding: 5px;
     padding-top: 15px;
     display: flex;
@@ -7,22 +7,26 @@
     height: 30em;
     width: 90vw;
     overflow-y: scroll;
+    justify-content: left;
 }
 
     .commentUsername{
-        background-color: green;
+        background-color: rgb(255, 243, 231);
+        color: black;
     }
 
     .commentLocation{
-        background-color: lightblue;
+        background-color: rgb(255, 243, 231);
+        color: black;
     }
 
     .commentContent{
-        background-color: pink;
+        background-color: rgb(255, 243, 231);
+        color: black;
     }
 
     .commentBox{
-        background-color: yellow;
+        background-color: white;
         padding: 5px;
         margin-bottom: 5px;
     }
