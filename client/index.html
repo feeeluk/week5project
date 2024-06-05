@@ -1,115 +1,127 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="./main.js" defer></script>
+    <script type="module" src="./gallery.js" defer></script>
+    <script type="module" src="./posts.js" defer></script>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="./vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script type="module" src="./main.js" defer></script>
-  <script type="module" src="./gallery.js" defer></script>
-  <script type="module" src="./posts.js" defer></script>
+    <link rel="stylesheet" href="./gallery.css" />
+    <link rel="stylesheet" href="./form.css" />
+    <link rel="stylesheet" href="./comments.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>The Bookish Book-Off Awards</title>
+  </head>
 
-  <link rel="stylesheet" href="./form.css">
-  <link rel="stylesheet" href="./comments.css">
-  <link rel="stylesheet" href="./style.css">
-  <title>The Bookish Book-Off Awards</title>
-</head>
-
-<body>
-
-  <!--TITLE & NAVIGATION-->
-  <header>
-    <div class="alert">
-      <p>NOMINATIONS CLOSED! Join the discussion now!</p>
-      <a href="#section3" id="alert-button">Share Your Thoughts</a>
-    </div>
-    <nav class="navigation">
-      <h1 class="site-title"><a href="#section1">The Bookish Book-Off Awards</a></h1>
-      <a href="#section1"><div class="logo"></div></a>
-      <ul class="navlinks">
-        <li><a href="#section1">Home</a></li>
-        <li><a href="#section2">Nominees</a></li>
-        <li><a href="#section3">Comments</a></li>
-      </ul>
-    </nav>
-  </header>
-
-
-
-
-  <main>
-    <!-- HERO SECTION -->
-    <section class="section" id="section1">
-      <div class="content section1-content">
-        <h1>Voting For 2024 Now Closed</h1>
-        <p>The nominations for 2024 are now closed.</p>
-        <p>Discover our <a href="#section2" class="in-text-ahref">shortlist</a> - selected by our panel of experts, ready for the next phase of the competition.</p>
+  <body>
+    <!--TITLE & NAVIGATION-->
+    <header>
+      <div class="alert">
+        <p>NOMINATIONS CLOSED! Join the discussion now!</p>
+        <a href="#section3" id="alert-button">Share Your Thoughts</a>
       </div>
-    </section>
+      <nav class="navigation">
+        <h1 class="site-title">
+          <a href="#section1">The Bookish Book-Off Awards</a>
+        </h1>
+        <a href="#section1"><div class="logo"></div></a>
+        <ul class="navlinks">
+          <li><a href="#section1">Home</a></li>
+          <li><a href="#section2">Nominees</a></li>
+          <li><a href="#section3">Comments</a></li>
+        </ul>
+      </nav>
+    </header>
 
+    <main>
+      <!-- HERO SECTION -->
+      <section class="section" id="section1">
+        <div class="content section1-content">
+          <h1>Voting For 2024 Now Closed</h1>
+          <p>The nominations for 2024 are now closed.</p>
+          <p>
+            Discover our
+            <a href="#section2" class="in-text-ahref">shortlist</a> - selected
+            by our panel of experts, ready for the next phase of the
+            competition.
+          </p>
+        </div>
+      </section>
 
-    <div class="section-border"></div>
+      <div class="section-border"></div>
 
+      <!--BOOK GALLERY-->
+      <section class="section" id="section2">
+        <h1>SHORTLIST</h1>
+        <div class="BookGallery">
+          <div class="bookList" id="bookList"></div>
+          <div class="showInfo" id="showInfo"></div>
+          <button class="previousImg" id="previousImg">Previous</button>
+          <button class="nextImg" id="nextImg">Next</button>
+          <div aria-live="polite" id="aria"></div>
+        </div>
+      </section>
 
-    <!--BOOK GALLERY-->
-    <section class="section" id="section2">
-      <h1>SHORTLIST</h1>
-      <div class="BookGallery">
-        <div class="bookList" id="bookList"></div>
-        <div class="showInfo" id="showInfo"></div>
-        <button class="previousImg" id="previousImg">Previous</button>
-        <button class="nextImg" id="nextImg">Next</button>
-        <div aria-live="polite" id="aria"></div>
-      </div>
-    </section>
+      <div class="section-border"></div>
 
+      <!-- COMMENTS SECTION -->
+      <section class="section" id="section3">
+        <h1>SUBMIT COMMENT</h1>
+        <form id="commentForm">
+          <p>
+            <label for="username" class="label">Username:</label>
+            <input
+              id="username"
+              name="username"
+              class="input"
+              type="text"
+              required
+            />
+          </p>
 
-    <div class="section-border"></div>
+          <p>
+            <label for="location" class="label">Location:</label>
+            <input
+              id="location"
+              name="location"
+              class="input"
+              type="text"
+              required
+            />
+          </p>
 
+          <p>
+            <label for="content" class="label">Content:</label>
+            <textarea
+              id="content"
+              name="content"
+              class="input textarea"
+            ></textarea>
+          </p>
 
-    <!-- COMMENTS SECTION -->
-    <section class="section" id="section3">
-      <h1>SUBMIT COMMENT</h1>
-      <form id="commentForm">
-        <p>
-          <label for="username" class="label">Username:</label>
-          <input id="username" name="username" class="input" type="text" required>
-        </p>
+          <p>
+            <label for="submit" class="label"></label>
+            <button id="submit" name="submit" class="submit" type="submit">
+              Submit
+            </button>
+          </p>
+        </form>
 
-        <p>
-          <label for="location" class="label">Location:</label>
-          <input id="location" name="location" class="input" type="text" required>
-        </p>
+        <div id="commentsSection"></div>
+      </section>
 
-        <p>
-          <label for="content" class="label">Content:</label>
-          <textarea id="content" name="content" class="input textarea"></textarea>
-        </p>
+      <div class="section-border"></div>
+    </main>
 
-        <p>
-          <label for="submit" class="label"></label>
-          <button id="submit" name="submit" class="submit" type="submit">Submit</button>
-        </p>
-      </form>
-
-      <div id="commentsSection"></div>
-
-    </section>
-
-
-
-    <div class="section-border"></div>
-
-
-  </main>
-
-
-  <!-- FOOTER -->
-  <footer>
-    <p class="footer-text">&copy; 2024 Bookish Inc.</p>
-    <p class="footer-text">Disclaimer: This website is a work of fiction done for a course assignment.</p>
-  </footer>
-
-</body>
-
+    <!-- FOOTER -->
+    <footer>
+      <p class="footer-text">&copy; 2024 Bookish Inc.</p>
+      <p class="footer-text">
+        Disclaimer: This website is a work of fiction done for a course
+        assignment.
+      </p>
+    </footer>
+  </body>
 </html>
