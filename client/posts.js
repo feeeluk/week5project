@@ -1,30 +1,40 @@
+let domain = "https://week5project-server.onrender.com/comments"
+
+// http://localhost:8080/comments
+// https://week5project-server.onrender.com/comments
+
 let htmlForm = document.getElementById("commentForm")
 let htmlCommentsSection = document.getElementById("commentsSection")
 
 fetchComments()
 
-htmlForm.addEventListener("submit", (event) => {
+htmlForm.addEventListener("submit", async (event) => {
     event.preventDefault()
     let data = new FormData(htmlForm)
     let newComment = Object.fromEntries(data)
 
-    console.log(newComment)
-
-    fetch("http://localhost:8080/comments", {
+    let response = await fetch(domain, {
         method: "POST", headers: {
-            "Content-Type":"application/json"
+            "Content-Type":"application/json",
         },
         body: JSON.stringify(newComment)
     })
 
-    htmlForm.reset()
-
-    setTimeout(fetchComments, 100)
-    
+    if (response.ok) {
+        setTimeout(fetchComments, 1)
+    } else {
+        // some sort of function that adds an error message ot the page
+        alert(`Couldn't get comments`)
+    }
+    htmlForm.reset()  
 })
 
 async function fetchComments(){
-    let response = await fetch("http://localhost:8080/comments")
+    let response = await fetch(domain, {
+        headers:{
+            "Cache-Control": "no-cache"
+        }
+    })
     let final = await response.json()
 
     displayComments(final)
