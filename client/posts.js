@@ -1,4 +1,4 @@
-let domain = "https://week5project-server.onrender.com/comments"
+let domain = "http://localhost:8080/comments"
 
 // http://localhost:8080/comments
 // https://week5project-server.onrender.com/comments
