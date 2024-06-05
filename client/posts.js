@@ -13,15 +13,17 @@ htmlForm.addEventListener("submit", async (event) => {
     let data = new FormData(htmlForm)
     let newComment = Object.fromEntries(data)
 
+    console.log(newComment)
+
     let response = await fetch(domain, {
         method: "POST", headers: {
             "Content-Type":"application/json",
         },
         body: JSON.stringify(newComment)
     })
-
+    console.log(response)
     if (response.ok) {
-        setTimeout(fetchComments, 1)
+        fetchComments()
     } else {
         // some sort of function that adds an error message ot the page
         alert(`Couldn't get comments`)
