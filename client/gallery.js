@@ -5,7 +5,7 @@ const bookList = [
     bookTitle: "The Bee Sting",
     bookAuthor: "Paul Murray",
     URL: "./images-gallery/1oksd2dp.bmp",
-    alt: "THE BEE STING by Paul Murray | 'The Bee Sting' is the story of the Barnes family, set in contemporary Ireland written with considerable wit and compassion.",
+    alt: "THE BEE STING by Paul Murray | 'The Bee Sting' is the story of the Barnes family, set in contemporary Ireland written with considerable wit and compassion",
   },
 
   {
@@ -18,7 +18,7 @@ const bookList = [
     bookTitle: "Birnam Wood",
     bookAuthor: "Eleanor Catton",
     URL: "./images-gallery/l7whnvec.bmp",
-    alt: " BIRNAM WOOD by Eleanor Catton | Birnam Wood follows memebers of a guerilla gardening collective as they undertake a new projct on abandoned farmland",
+    alt: " BIRNAM WOOD by Eleanor Catton | Birnam Wood follows members of a guerilla gardening collective as they undertake a new projct on abandoned farmland",
   },
   {
     bookTitle: "Lessons in Chemeistry",
