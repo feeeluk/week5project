@@ -8,28 +8,35 @@ let htmlCommentsSection = document.getElementById("commentsSection")
 
 fetchComments()
 
-htmlForm.addEventListener("submit", (event) => {
+htmlForm.addEventListener("submit", async (event) => {
     event.preventDefault()
     let data = new FormData(htmlForm)
     let newComment = Object.fromEntries(data)
 
     console.log(newComment)
 
-    fetch(domain, {
+    let response = await fetch(domain, {
         method: "POST", headers: {
-            "Content-Type":"application/json"
+            "Content-Type":"application/json",
         },
         body: JSON.stringify(newComment)
     })
-
-    htmlForm.reset()
-
-    setTimeout(fetchComments, 100)
-    
+    console.log(response)
+    if (response.ok) {
+        fetchComments()
+    } else {
+        // some sort of function that adds an error message ot the page
+        alert(`Couldn't get comments`)
+    }
+    htmlForm.reset()  
 })
 
 async function fetchComments(){
-    let response = await fetch(domain)
+    let response = await fetch(domain, {
+        headers:{
+            "Cache-Control": "no-cache"
+        }
+    })
     let final = await response.json()
 
     displayComments(final)
