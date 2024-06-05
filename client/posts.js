@@ -1,3 +1,8 @@
+let domain = "https://week5project-server.onrender.com/comments"
+
+// http://localhost:8080/comments
+// https://week5project-server.onrender.com/comments
+
 let htmlForm = document.getElementById("commentForm")
 let htmlCommentsSection = document.getElementById("commentsSection")
 
@@ -10,7 +15,7 @@ htmlForm.addEventListener("submit", (event) => {
 
     console.log(newComment)
 
-    fetch("http://localhost:8080/comments", {
+    fetch(domain, {
         method: "POST", headers: {
             "Content-Type":"application/json"
         },
@@ -24,7 +29,7 @@ htmlForm.addEventListener("submit", (event) => {
 })
 
 async function fetchComments(){
-    let response = await fetch("http://localhost:8080/comments")
+    let response = await fetch(domain)
     let final = await response.json()
 
     displayComments(final)
