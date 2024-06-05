@@ -64,7 +64,6 @@ header {
     filter: drop-shadow(0px -2px 4px #443434);
 }
 
-
 .alert {
     height: 2.2em;
     display: flex;
@@ -97,8 +96,6 @@ header {
     align-items: center;
     flex-wrap: wrap;
     gap: 2.5em;
-    position: relative;
-    left: -0.8em;
     background-color: rgb(255, 243, 231);
 }
 
@@ -120,6 +117,7 @@ header {
 .logo:hover {
     background-image: url("./images/logo-hover.png");
 }
+
 
 
 /* SECTIONS COMMON STYLES */
@@ -213,26 +211,7 @@ footer {
 
 
 
-
-
-
-
-
 /* DYNAMIC ELEMENTS */
-.label {
-    display: inline-block;
-    width: 150px;
-    vertical-align: top;
-}
-
-.input {
-    width: 200px;
-}
-
-.textarea {
-    min-height: 120px;
-}
-
 #announcer {
     visibility: hidden;
 }
