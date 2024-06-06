@@ -66,27 +66,27 @@ function book(newBook) {
   createDisplayImg(bookList[currentImgIndex]);
 }
 
-function createPicList(bookList) {
-  for (let i = 0; i < bookList.length; bookList = bookList + 1) {
-    let img = document.createElement("img");
+// function createPicList(bookList) {
+//   for (let i = 0; i < bookList.length; bookList = bookList + 1) {
+//     let img = document.createElement("img");
 
-    img.src = bookList[i].URL;
-    img.alt = bookList[i].alt;
+//     img.src = bookList[i].URL;
+//     img.alt = bookList[i].alt;
 
-    img.setAttribute("tabindex", "0");
-    img.classList.add("thumb-img");
-    img.addEventListener("click", function () {
-      console.log(bookList[i]);
-      book = i;
-      console.log(currentImgIndex);
-      createDisplayImg(bookList[i]);
-    });
+//     img.setAttribute("tabindex", "0");
+//     img.classList.add("thumb-img");
+//     img.addEventListener("click", function () {
+//       console.log(bookList[i]);
+//       book = i;
+//       console.log(currentImgIndex);
+//       createDisplayImg(bookList[i]);
+//     });
 
-    locationOfBookList.appendChild(img);
-  }
-}
+//     locationOfBookList.appendChild(img);
+//   }
+// }
 createDisplayImg(bookList[0]);
-createPicList();
+// createPicList();
 
 function createDisplayImg(Picobj) {
   const aria = document.getElementById("aria");

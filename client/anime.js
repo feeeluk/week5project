@@ -1,3 +1,4 @@
+
 // NAV BAR ANIMATION
 // Using `querySelectorAll` to select everything under these classes
 const navElements = document.querySelectorAll(".nav-anime, .nav-anime-letters")
