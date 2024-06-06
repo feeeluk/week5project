@@ -4,32 +4,32 @@ const bookList = [
   {
     bookTitle: "The Bee Sting",
     bookAuthor: "Paul Murray",
-    URL: "./images-gallery/1oksd2dp.bmp",
+    URL: "./images-gallery/00.png",
     alt: "THE BEE STING by Paul Murray | 'The Bee Sting' is the story of the Barnes family, set in contemporary Ireland written with considerable wit and compassion",
   },
 
   {
     bookTitle: "YellowFace",
     bookAuthor: "R. F. Kuang",
-    URL: "./images-gallery/kvhchlm8.bmp",
+    URL: "./images-gallery/01.jpg",
     alt: "YELLOWFACE by R.F Kuang | A satire of racial diversity in the publishing industry",
   },
   {
     bookTitle: "Birnam Wood",
     bookAuthor: "Eleanor Catton",
-    URL: "./images-gallery/l7whnvec.bmp",
+    URL: "./images-gallery/02.jpg",
     alt: " BIRNAM WOOD by Eleanor Catton | Birnam Wood follows members of a guerilla gardening collective as they undertake a new projct on abandoned farmland",
   },
   {
     bookTitle: "Lessons in Chemeistry",
     bookAuthor: "Bonnie Garmus",
-    URL: "./images-gallery/ol72l3sg.bmp",
+    URL: "./images-gallery/03.jpg",
     alt: "LESSONS IN CHEMISTRY by Bonnie Garmus | An uplifting summer book about a chemist who becomes a TV chef",
   },
   {
     bookTitle: "Butter",
     bookAuthor: "Asako Yuzuki",
-    URL: "./images-gallery/5tyh3bbj.bmp",
+    URL: "./images-gallery/04.jpg",
     alt: "BUTTER by Asako Yuzuki | A Japanese bestseller about a gourmet cook/serial killer and the journalist intent on cracking her case",
   },
 ];

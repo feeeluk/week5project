@@ -4,19 +4,20 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Bookish Book-Off Awards</title>
+    <!-- SCRIPTS -->
     <script type="module" src="./main.js" defer></script>
     <script type="module" src="./gallery.js" defer></script>
     <script type="module" src="./posts.js" defer></script>
-
-    <link rel="stylesheet" href="./anime.css" />
-    <script src="./anime.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-
+    <!-- STYLES -->
+    <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./gallery.css" />
     <link rel="stylesheet" href="./form.css" />
     <link rel="stylesheet" href="./comments.css" />
-    <link rel="stylesheet" href="./style.css" />
-    <title>The Bookish Book-Off Awards</title>
+    <!-- ANIME.JS LIBRARY -->
+    <script src="./import/anime.min.js"></script>
+    <script src="./anime.js" defer></script>
+    <link rel="stylesheet" href="./anime.css" />
   </head>
 
   <body>
@@ -27,29 +28,56 @@
         <a href="#section3" id="alert-button">Share Your Thoughts</a>
       </div>
       <nav class="navigation">
-        <h1 class="site-title">
-          <a href="#section1">The Bookish Book-Off Awards</a>
-        </h1>
-        <a href="#section1"><div class="logo"></div></a>
-        <ul class="navlinks">
-          <li><a href="#section1">Home</a></li>
-          <li><a href="#section2">Nominees</a></li>
-          <li><a href="#section3">Comments</a></li>
-        </ul>
+        <div class="nav-contents">
+          <h1 class="site-title">
+            <a href="#section1" class="nav-anime">
+              <span class="nav-anime-wrapper">
+                <span class="line line1"></span>
+                <span class="nav-anime-letters">The Bookish Book-Off Awards</span>
+                <span class="line line2"></span>
+              </span>
+            </a>
+          </li></h1>
+          <a href="#section1"><div class="logo"></div></a>
+          <ul class="navlinks">
+            <li>
+              <a href="#section1" class="nav-anime">
+                <span class="nav-anime-wrapper">
+                  <span class="line line1"></span>
+                  <span class="nav-anime-letters">Home</span>
+                  <span class="line line2"></span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#section2" class="nav-anime">
+                <span class="nav-anime-wrapper">
+                  <span class="line line1"></span>
+                  <span class="nav-anime-letters">Shortlist</span>
+                  <span class="line line2"></span>
+                </span>
+              </a>
+            <li>
+              <a href="#section3" class="nav-anime">
+                <span class="nav-anime-wrapper">
+                  <span class="line line1"></span>
+                  <span class="nav-anime-letters">Comments</span>
+                  <span class="line line2"></span>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
 
     <main>
       <!-- HERO SECTION -->
       <section class="section" id="section1">
-        <div class="content section1-content">
-          <h1 class="ml5">
-            <span class="text-wrapper">
-              <span class="line line1"></span>
-              <span class="letters letters-left">Voting</span>
-              <span class="letters letters-right">Closed</span>
-              <span class="line line2"></span>
-            </span>
+        <div class="section1-content">
+          <h1 class="hero-title">
+              <span class="hero-title-letters letters-left">Voting</span>
+              <span class="hero-title-letters letters-right">Closed</span>
           </h1>
           <p>The nominations for 2024 are now closed.</p>
           <p>
@@ -80,6 +108,7 @@
       <!-- COMMENTS SECTION -->
       <section class="section" id="section3">
         <h1>SUBMIT COMMENT</h1>
+        <div class="comment-div">
         <form id="commentForm">
           <p>
             <label for="username" class="label">Username:</label>
@@ -119,6 +148,7 @@
             </button>
           </p>
         </form>
+        </div>
 
         <div id="commentsSection"></div>
       </section>
