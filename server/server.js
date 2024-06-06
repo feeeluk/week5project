@@ -22,32 +22,25 @@ app.get('/', (request, response) => {
 
 app.get('/comments', async (request, response) => {
 
-  const result = await db.query(`SELECT * FROM comments`)
+  const result = await db.query(`SELECT * FROM comments ORDER BY comments DESC`)
   const final = result.rows
 
   response.json(final)
 })
 
-app.post('/comments', (request, response) => {
+app.post('/comments', async (request, response) => {
   console.log(request.body)
   let username = request.body.username
   let location = request.body.location
   let content = request.body.content
   
-  db.query(`INSERT INTO comments (username, location, content) VALUES ($1, $2, $3)`, [username, location, content])
-  response.send("saved comment")
+  try {
+    const comment = await db.query(`INSERT INTO comments (username, location, content) VALUES ($1, $2, $3)`, [username, location, content])
+    response.status(200).json({savedComments:comment})
+  } catch (error) {
+     response.status(500).json({error: error})
+  }
 })
-
-/*needed for form
-app.get("/form", (request, response) => {
-  response.json({ message: `form` });
-});
-
-app.post("/form", function (request, response) {
-  response.json({ message: "you sent this to me" });
-})
-
-*/
 
 app.listen(PORT, () => {
   console.log(`server running on port: ${PORT}`);
