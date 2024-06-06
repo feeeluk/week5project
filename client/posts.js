@@ -21,13 +21,14 @@ htmlForm.addEventListener("submit", async (event) => {
         },
         body: JSON.stringify(newComment)
     })
-    console.log(response)
+
     if (response.ok) {
         fetchComments()
     } else {
         // some sort of function that adds an error message ot the page
         alert(`Couldn't get comments`)
     }
+
     htmlForm.reset()  
 })
 

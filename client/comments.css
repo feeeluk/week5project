@@ -4,7 +4,7 @@
     padding-top: 15px;
     margin: 0 auto;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     height: 30em;
     width: 90vw;
     overflow-y: scroll;
