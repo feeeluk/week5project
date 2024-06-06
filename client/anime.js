@@ -1,4 +1,3 @@
-
 // NAV BAR ANIMATION
 // Using `querySelectorAll` to select everything under these classes
 const navElements = document.querySelectorAll(".nav-anime, .nav-anime-letters")
@@ -40,12 +39,15 @@ anime.timeline()
     translateX: ["0.3em", 0],
     easing: "easeOutExpo",
     duration: 2000,
-    offset: "+=300"
-}).add({
+    delay: 500,
+})
+
+anime.timeline()
+.add({
     targets: ".hero-title .letters-right",
     opacity: [0,1],
     translateX: ["-0.3em", 0],
     easing: "easeOutExpo",
     duration: 2000,
-    offset: "-=2000"
+    delay: 500,
 })
