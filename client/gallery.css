@@ -21,6 +21,8 @@ button {
 }
 
 .main-pic {
+  height: 470px;
+  width: auto;
   display: block;
   margin-left: auto;
   margin-right: auto;
