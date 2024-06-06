@@ -118,12 +118,12 @@ header {
 .logo {
   width: 60px;
   height: 48px;
-  background-image: url("./images/logo.png");
+  background-image: url("/images/logo.png");
   transition: all 0.2s ease;
 }
 
 .logo:hover {
-  background-image: url("./images/logo-hover.png");
+  background-image: url("/images/logo-hover.png");
 }
 
 /* SECTIONS COMMON STYLES */
@@ -206,7 +206,7 @@ header {
       rgba(0, 0, 0, 0.096) 0%,
       rgba(61, 28, 9, 0.5) 100%
     ),
-    url("./images/pexels-photo-2128249.jpg");
+    url("/images/pexels-photo-2128249.jpg");
 }
 
 .section1-content {

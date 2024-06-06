@@ -1,3 +1,4 @@
+console.log("posts.js")
 let domain = "https://week5project-server.onrender.com/comments"
 
 // http://localhost:8080/comments
